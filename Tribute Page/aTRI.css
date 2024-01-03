@@ -1,0 +1,25 @@
+body{
+   padding-top: 25px;
+   padding-bottom: 25px;
+}
+.bground{
+    background-color: lightgray;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+   
+    
+}
+.hcent{
+   text-align: center;
+}
+.imp{
+    background-color: white;
+    text-align: center;
+    margin: 20px;
+}
+.Ctnt{
+    padding-left: 170px;
+    padding-right: 170px;
+    margin-left: 140px;
+    margin-right: 140px;
+}

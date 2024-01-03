@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body> 
+    <!--'<id>'=you will only use it once. can be unique. '<h1>'= important header. -->
+    <header id="Title">
+        <h1>Survey Form</h1>
+    </header>
+    <!--'<class>' = is an attribute which specifies one or more class names for an HTML element-->
+    <div class="container">
+        <div class="content">
+            <p>Let us know how we can improve freeCodeCamp</p>
+        </div>
+        <!--'<form>' =is used to create an HTML form for user input. 'method'=attribute specifies how to send form-data. 
+'onsubmit' =used on a form ,  and indicates that the information is to be submitted to the server at this point unless you return false -->
+        <form name="form" id="form-survey" method="post" onsubmit="validation()">
+            <div class="row-tab">
+                <div class="label-tab">
+                    <!--'<label>' = used to define a caption for an element in an HTML form. -->
+                    <label>Name:</label>
+                </div>
+                <div class="input-tab">
+                    <!--'<input>' =is an input control that presents users with an interactive control for entering data. 
+                        'type' =element to specify the type of input to display. -->
+                   <!--'<placeholder>' = it holds the text or element. 
+                       'required' =It states that an input field must be filled up before the form can be submitted when it is present.-->     
+                    <input type="text" name="Name" id="fav-language" placeholder="Enter a Name" required>
+                </div>
+            </div>
+            <div class="row-tab">
+                <div class="label-tab">
+                    <label>Email:</label>
+                </div>
+                <div class="input-tab">
+                    <input type="text" name="email" id="fav-language" placeholder="Enter a Email" required>
+                </div>
+            </div>
+            <div class="row-tab">
+                <div class="label-tab">
+                    <label>Age:</label>
+                </div>
+                <div class="input-tab">
+             <!--'min and max' = to create a range of legal values or values to input element. 'name'= specifies the name of the input.-->
+                    <input type="number" name="Age" id="fav-language" placeholder="Age" min="1" max="100" required>
+                </div>
+            </div>
+
+            <div class="row-tab">
+                <div class="label-tab">
+                    <label>Which option best describes your current role?</label>
+                </div>
+                <div class="select-tab">
+                <!--'<select>' =to create a drop-down list. '<option>'=it is a select list. 
+                    'value' = specifies what is delivered to the server when the form is submitted.-->
+                    <select name="status" id="status">
+                        <option value="student">Student</option>
+                        <option value="teacher">Teacher</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row-tab">
+                <div class="label-tab">
+                    <label>How likely is that you would recommend freeCodeCamp to a friend?</label>
+                </div>
+                <div class="input-tab">
+                    <div>
+                        <input type="radio" id="definitely" name="input" value=" Definitely" required>
+                        <!--'for' = attribute. The id of the form element to which the label should be linked.-->
+                        <label for="definitely">Definitely</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="maybe" name="input" value="Maybe" required>
+                        <label for="maybe">Maybe</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="not sure" name="input" value="Not Sure" required>
+                        <label for="not sure">Not Sure</label>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row-tab">
+                <div class="label-tab">
+                    <label>What do you like most in FCC:</label>
+                </div>
+                <div class="select-tab">
+                    <select name="choice" id="choice">
+                        <option value="option">Select an option</option>
+                        <option value="--1--">--1--</option>
+                        <option value="--2--">--2--</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row-tab">
+                <div class="label-tab">
+                    <label>Things that should be improved in the future(Check All that apply):</label>
+                </div>
+                <div class="input-tab">
+                    <div>
+                        <input type="radio" name="Answers" id="FP" value="Front-end Project">
+                        <label for="FP">Front-end Project</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="Answers" id="BP" value="Back-end Project">
+                        <label for="BP">Back-end Project</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="Answers" id="DV" value="Data Visualization">
+                        <label for="DV">Data Visualization</label>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <input type="submit" value="submit">
+            </div>
+    </div>
+    </form>
+    <script src="validation.js"></script>
+</body>
+
+</html>
